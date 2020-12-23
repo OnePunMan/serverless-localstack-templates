@@ -38,11 +38,13 @@ There are a few essential tools that are required before you begin
     
     You can also use your real credentials if you plan to deploy to AWS. Although localstack does not require real credentials, they must exist, that's why we're creating a dummy profile as a placeholder. If you're unfamiliar with AWS credentials, you can find out more [here](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html).
 
-5. Check out the [templates](templates) folder for specific skeleton setups and continue by following its own `README.md` file.
+5. Make sure Docker is running, localstack depends on it.
+
+6. Check out the [templates](templates) folder for specific skeleton setups and continue by following its own `README.md` file.
 
 
 ### Contributing
 Got another idea for a template that you think will be useful? Drop a PR and I'll be glad to add it in!
 
 ### Questions
-Feel free to open issues and inquiry about any part of repo, I'll do my best to address any questions and problems.
+Feel free to open an issue regarding any questions or problems, I will do my best to address any problems.
