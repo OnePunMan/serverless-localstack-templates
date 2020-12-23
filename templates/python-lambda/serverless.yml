@@ -6,7 +6,7 @@ provider: # Required to tell serverless this is an aws project, modify as needed
   # Modify the following with real aws profile to deploy to aws
   # Add more attributes as needed to suit your aws environment, eg. region
   stage: prod
-  profile: thedasbot
+  profile: localdummy
 
 plugins: # Load the localstack plugin
   - serverless-localstack
