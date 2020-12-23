@@ -27,4 +27,4 @@ functions:
   hello:
     handler: handler.hello
     events:
-      - http: POST hello
+      - http: POST /hello
