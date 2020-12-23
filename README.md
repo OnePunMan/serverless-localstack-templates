@@ -6,7 +6,7 @@ There overwhelming amounts of articles and documentation out there for each of t
 
 ## Prerequisites
 There are a few essential tools that are required before you begin
-- [Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/) (make sure it's running)
 - [python](https://www.python.org/) (python 3 recommended)
 - [pip](https://pypi.org/project/pip/) (usually already included when installing python)
 - [npm](https://www.npmjs.com/)
@@ -16,15 +16,11 @@ There are a few essential tools that are required before you begin
 
     `npm i -g serverless`
 
-2. Install the **serverless-localstack** plugin (using serverless or npm)
-
-    `serverless plugin install --name serverless-localstack` 
-
-3. Install **localstack** (I recommend installing via a python [virtual environment](https://docs.python.org/3/tutorial/venv.html), but it's optional)
+2. Install **localstack** (I recommend installing via a python [virtual environment](https://docs.python.org/3/tutorial/venv.html), but it's optional)
 
     `pip3 install localstack`
 
-4. Setup dummy AWS credentials - Add a *dummy* profile to your aws credentials file    
+3. Setup dummy AWS credentials - Add a *dummy* profile to your aws credentials file    
     Either manually edit the `credentials` file in the `.aws` folder and append the following lines:
 
     ```
@@ -38,9 +34,11 @@ There are a few essential tools that are required before you begin
     
     You can also use your real credentials if you plan to deploy to AWS. Although localstack does not require real credentials, they must exist, that's why we're creating a dummy profile as a placeholder. If you're unfamiliar with AWS credentials, you can find out more [here](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html).
 
-5. Make sure Docker is running, localstack depends on it.
+4. Create a serverless project from one of the [templates](templates) (or [from scratch](https://www.serverless.com/framework/docs/providers/aws/cli-reference/create/)). Each template has its own `README.md` file with more specific instructions.
 
-6. Check out the [templates](templates) folder for specific skeleton setups and continue by following its own `README.md` file.
+5. Install the **serverless-localstack** plugin in your *serverless project directory*. The serverless-localstack plugin is *per-project* based, so it will only work in a serverless project folder (i.e. any folder with a `serverless.yml` file). 
+
+    `serverless plugin install --name serverless-localstack` 
 
 
 ### Contributing
