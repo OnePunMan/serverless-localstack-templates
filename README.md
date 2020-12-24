@@ -12,7 +12,7 @@ There are a few essential tools that are required before you begin
 - [npm](https://www.npmjs.com/)
 
 ## Dependencies
-1. Install the **serverless** framework
+1. Install the **serverless** framework (run with `sudo` if you encounter permission errors)
 
     `npm i -g serverless`
 
