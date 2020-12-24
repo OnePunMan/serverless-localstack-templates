@@ -1,8 +1,8 @@
 # Introduction
-This repo serves as a simplistic template repo dedicated to developers who wants to use [serverless](https://www.serverless.com/) with [localstack](https://github.com/localstack/localstack) integration in their aws projects. localstack is a very useful tool that simulates AWS stacks locally for the purpose of development and testing.
+This repo functions as a simple template dedicated to developers who want to use [serverless](https://www.serverless.com/) with [localstack](https://github.com/localstack/localstack). Localstack is a very useful tool that simulates AWS stacks locally for the purpose of development and testing.
 
 ## Why this repo?
-There overwhelming amounts of articles and documentation out there for each of the dependencies that can be difficult to follow and put together. The templates provided here are designed to be very concise with minimal configurations - ideal for those who just want a quick starting point for their new projects.
+There are an overwhelming amount of articles and documentation for each of the dependencies that can be difficult to follow and put together. These templates are designed to be very concise with minimal configurations - ideal for those who just want a quick starting point for their new projects.
 
 ## Prerequisites
 There are a few essential tools that are required before you begin
@@ -20,7 +20,7 @@ There are a few essential tools that are required before you begin
 
     `pip3 install localstack`
 
-3. Setup dummy AWS credentials - Add a *dummy* profile to your aws credentials file    
+3. Setup dummy AWS credentials - Add a *dummy* profile to your aws credentials file
     Either manually edit the `credentials` file in the `.aws` folder and append the following lines:
 
     ```
@@ -31,14 +31,14 @@ There are a few essential tools that are required before you begin
     OR if you are on Mac or Linux, simply:
 
     `mkdir -p ~/.aws && echo "[localdummy]\naws_access_key_id = dummy_id\naws_secret_access_key = dummy_key" >> ~/.aws/credentials`
-    
+
     You can also use your real credentials if you plan to deploy to AWS. Although localstack does not require real credentials, they must exist, that's why we're creating a dummy profile as a placeholder. If you're unfamiliar with AWS credentials, you can find out more [here](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html).
 
 4. Create a serverless project from one of the [templates](templates) (or [from scratch](https://www.serverless.com/framework/docs/providers/aws/cli-reference/create/)). Each template has its own `README.md` file with more specific instructions.
 
-5. Install the **serverless-localstack** plugin in your *serverless project directory*. The serverless-localstack plugin is *per-project* based, so it will only work in a serverless project folder (i.e. any folder with a `serverless.yml` file). 
+5. Install the **serverless-localstack** plugin in your *serverless project directory*. The serverless-localstack plugin is *per-project* based, so it will only work in a serverless project folder (i.e. any folder with a `serverless.yml` file).
 
-    `serverless plugin install --name serverless-localstack` 
+    `serverless plugin install --name serverless-localstack`
 
 
 ### Contributing
